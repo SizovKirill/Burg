@@ -1,0 +1,72 @@
+.footer {
+    background-image: url("../img/bg/footer_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: rem(60px);
+    padding: rem(10px) 0;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer__container-left {
+    width: 50%;
+}
+
+.footer__address {
+    color: $white;
+    font-size: rem(14px);
+    font-family: "ubuntulight";
+    margin-bottom: rem(5px);
+}
+
+.footer__icon-phone {
+    width: rem(12px);
+    height: rem(12px);
+    margin-right: rem(10px);
+}
+
+.footer__phone-link {
+    color: $orange;
+    font-family: "ubuntubold";
+    font-size: rem(14px);
+    text-decoration: none;
+}
+
+.footer__container-right {
+    width: 50%;
+    text-align: right;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer__social-list {
+    display: flex;
+    align-items: center;
+}
+
+.footer__social-item {
+    margin-left: rem(20px);
+}
+
+.footer__social-link {
+    opacity: .6;
+    transition: .5s;
+    &:hover {
+        opacity: initial;
+    }
+}
+
+.footer__social-link__icon {
+    width: rem(20px);
+    height: rem(20px);
+}

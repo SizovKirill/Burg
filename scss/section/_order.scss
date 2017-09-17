@@ -1,0 +1,130 @@
+.order {
+    background: url('../img/bg/order_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: cover;
+    align-items: center;
+}
+
+.section__title--order {
+    text-align: center;
+    margin-bottom: rem(80px);
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.form__col {
+    width: 49%;
+}
+
+.form__row {
+    display: flex;
+    margin-bottom: rem(20px);
+    flex: 1;
+}
+
+.form__cell {
+    width: 100%;
+    color: $white;
+    margin-left: rem(20px);
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+.form__fields-title {
+    font-family: ubuntulight;
+    font-size: rem(14px);
+    margin-bottom: rem(7px);
+}
+
+.form__input {
+    width: 100%;
+    font-size: rem(16px);
+    padding: rem(8px);
+    background: $white;
+    border-radius: rem(7px);
+    border: 0;
+}
+
+.form__textarea {
+    border-radius: rem(7px);
+    width: 100%;
+    height: rem(110px);
+    resize: none;
+}
+
+.form__radio {
+    display: flex;
+}
+
+.form__radio-label {
+    display: flex;
+    align-items: center;
+    margin-left: rem(20px);
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+.form__radio-text {
+    color: $white;
+    margin-left: rem(10px);
+    font-family: ubuntulight;
+    font-size: rem(14px);
+}
+
+.form__radio-element {
+    display: none;
+}
+
+.form__radio-element:checked+.form__radio-fake:after {
+    display: block;
+}
+
+.form__radio-fake {
+    width: rem(15px);
+    height: rem(15px);
+    background-color: $white;
+    border-radius: 50%;
+    position: relative;
+    &:after {
+        content: "";
+        display: none;
+        width: rem(7px);
+        height: rem(7px);
+        border-radius: 50%;
+        background: $orange;
+        position: absolute;
+        left: rem(4px);
+        top: rem(4px);
+    }
+}
+
+.form__checkbox-title {
+    color: $white;
+    font-family: ubuntulight;
+    font-size: rem(14px);
+    margin-left: rem(10px);
+}
+
+.order-link__text {
+    padding: rem(7px);
+    margin-left: rem(13px);
+}
+
+.order-link__clear {
+    color: $white;
+    font-family: ubuntulight;
+    font-size: rem(14px);
+    text-decoration: none;
+}

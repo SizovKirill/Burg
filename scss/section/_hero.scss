@@ -1,0 +1,218 @@
+    .hero {
+        background-image: url('../img/bg/texture.jpg');
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        position: relative;
+    }
+    
+    .header {
+        margin-top: rem(10px);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .header__logo {
+        margin-right: auto;
+    }
+    
+    .header__menu {
+        @include tablets () {
+            display: none;
+        }
+    }
+    
+    .nav {
+        margin-right: rem(15px);
+    }
+    
+    .nav__list {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav__item {
+        display: inline-block;
+        vertical-align: middle;
+        white-space: nowrap;
+        &:after {
+            display: inline-block;
+            vertical-align: middle;
+            content: ' ';
+            @include circle (rem(5px),
+            $white);
+            margin: 0 rem(11px);
+        }
+        &:last-child:after {
+            display: none;
+        }
+    }
+    
+    .nav__link {
+        color: $white;
+        font-size: rem(13px);
+        font-weight: 500;
+        line-height: 1.42;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        vertical-align: middle;
+        transition: 0.5s;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+    .header__gamburger-mnu {
+        position: relative;
+        display: none;
+        @include tablets {
+            display: flex;
+        }
+    }
+    
+    .hamburger-mnu__link-elem {
+        background: $white;
+        width: rem(25px);
+        height: rem(5px);
+        border-radius: rem(5px);
+        margin: rem(10px);
+        &:after,
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            background: $white;
+            width: rem(25px);
+            height: rem(5px);
+            border-radius: rem(5px);
+        }
+        &:before {
+            top: 0;
+        }
+    }
+    
+    .hero__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hero__content {
+        margin-bottom: rem(65px);
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        @include tablets {
+            flex-direction: column;
+        }
+    }
+    
+    .hero__content-left {
+        width: 50%;
+        @include phones {
+            width: 80%;
+        }
+    }
+    
+    .hero__content-right {
+        width: 50%;
+        @include tablets {
+            text-align: center;
+        }
+        @include phones {
+            width: 100%;
+        }
+    }
+    
+    .hero__img {
+        align-items: center;
+    }
+    
+    .hero__img-burger {
+        max-width: 100%;
+    }
+    
+    .hero__description {
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    
+    .section__title {
+        color: $yellow;
+        font-family: 'gagalinregular';
+        font-size: rem(72px);
+        font-weight: 400;
+        line-height: 1.42;
+        padding-top: rem(68px);
+        margin: 0 0 rem(10px) 0;
+        @include phones {
+            padding-top: rem(50px);
+        }
+    }
+    
+    .hero__description-text {
+        color: $white;
+        font-family: 'lifehackmedium';
+        font-size: rem(65px);
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: rem(-1.8px);
+        @include tablets {
+            text-align: center;
+        }
+    }
+    
+    .hero__block {
+        position: fixed;
+        top: rem(88px);
+        right: rem(50px);
+    }
+    
+    .hero__block-item {
+        margin-bottom: rem(-1px);
+    }
+    
+    .hero__block-point {
+        width: rem(16px);
+        height: rem(16px);
+        display: inline-block;
+        border-radius: 50%;
+        vertical-align: middle;
+        position: relative;
+        &:after {
+            content: "";
+            width: rem(6px);
+            height: rem(6px);
+            border-radius: 50%;
+            background: $white;
+            position: absolute;
+            left: rem(4px);
+            top: rem(4px);
+        }
+        @include tablets {
+            display: none;
+        }
+    }
+    
+    .active {
+        border: rem(1px) solid $white;
+    }
+    
+    .hero__scroll {
+        margin-bottom: rem(40px);
+        position: absolute;
+        bottom: rem(40px);
+        left: 50%;
+    }
+    
+    .hero__scroll-img {
+        width: rem(29px);
+        height: rem(14px);
+    }
